@@ -143,3 +143,48 @@ function calculateTip(billAmount, tipPercentage) {
 }
 
 console.log('Exercise 7 Result:', calculateTip(50, 20))
+
+function convertTemperature(temp, scale) {
+  if (scale === 'C') {
+    return (temp * 9) / 5 + 32
+  } else if (scale === 'F') {
+    return ((temp - 32) * 5) / 9
+  } else {
+    return 'Invalid scale'
+  }
+}
+
+console.log(convertTemperature(32, 'C'))
+console.log(convertTemperature(32, 'F'))
+
+/*
+Exercise 9: basicCalculator()
+
+Create a function named basicCalculator. 
+It should take three arguments: two numbers and a string representing 
+an operation ('add', 'subtract', 'multiply', 'divide'). 
+Perform the provided operation on the two numbers. 
+In operations where the order of numbers is important, 
+treat the first parameter as the first operand and the 
+second parameter as the second operand.
+
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+
+Complete the exercise in the space below:
+*/
+
+function basicCalculator(num1, num2, operation) {
+  if (operation === 'add') {
+    return num1 + num2
+  } else if (operation === 'subtract') {
+    return num1 - num2
+  } else if (operation === 'multiply') {
+    return num1 * num2
+  } else if (operation === 'divide') {
+    return num2 === 0 ? 'Cannot divide by zero' : num1 / num2
+  } else {
+    return 'Invalid operation'
+  }
+}
+
+console.log('Exercise 9 Result:', basicCalculator(10, 5, 'subtract'))
